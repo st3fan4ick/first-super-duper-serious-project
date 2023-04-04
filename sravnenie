@@ -1,0 +1,24 @@
+def main():
+    print("Введите q чтобы выйти!")
+    a = input("Первое число: ")
+    if a == 'q':
+        print("Выход из программы...")
+        exit()
+    b = input("Второе число: ")
+    try:
+        a = int(a)
+        b = int(b)
+    except ValueError:
+        print("Вводите только числа или q для выхода!")
+        main()
+    else:
+        if a == b:
+            print(f"Число {a} равно числу {b}")
+            main()
+        elif a < b:
+            print(f"Число {a} меньше числа {b}")
+            main()
+        elif a > b:
+            print(f"Число {a} больше числа {b}")
+            main()
+main()
